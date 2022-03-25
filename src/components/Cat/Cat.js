@@ -1,7 +1,5 @@
 import React from "react";
 import "./Cat.css"
-import getAllCats from "../../services/client";
-import axios from "axios";
 
 /*
 Purpose: The purpose of the Cat component is to represent how a cat card will be formatted and styled. For now, we’ll hard
@@ -22,14 +20,44 @@ const cat = {
     grooming: 1
 }
 class Cat extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state={
-            data:[]
-        }
-    }
+
 
     render() {
+        return (
+            <div className="cat">
+                <div className="image-container">
+                    <img src={cat.imageSrc} alt={cat.name}/>
+                </div>
+                <h2>{cat.name}</h2>
+                <div className="cat-information">
+                    <div className="cat-origin">
+                        <p><span className="bold">Origin:</span> {cat.origin}</p>
+                        <p><span className="bold">Life Span:</span> {cat.lifespan}</p>
+                        <p><span className="bold">Description:</span> <br/>{cat.description}</p>
+                    </div>
+                    <div className="cat-reviews">
+                        <h3 className="adaptability"><span className="bold">Adaptability: </span>{cat.adaptability}/5</h3>
+                        <h3><span className="bold">Affection:</span> {cat.affectionLevel}/5</h3>
+                        <p><span className="bold">Energy:</span> {cat.energyLevel}/5</p>
+                        <p><span className="bold">Grooming: </span>{cat.grooming}/5</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Cat;
+
+
+// constructor(props) {
+//     super(props);
+//     this.state={
+//         data:[]
+//     }
+// }
+
+/*
         axios.get('https://api.thecatapi.com/v1/breeds', { headers: { 'x-api-key': 'a1e5d2b0-af8d-432e-8969-2b49d6621fbc' } })
             .then(response => {
                 // If request is good...
@@ -39,29 +67,4 @@ class Cat extends React.Component{
             .catch((error) => {
                 console.log('error ' + error);
             });
-        
-        return (
-            <div className="cat">
-                <div className="image-container">
-                    <img src={cat.imageSrc} alt={cat.name}/>
-                </div>
-                <h2>{cat.name}</h2>
-                <div className="cat-information">
-                    <div className="cat-origin">
-                        <p><b className="bold">Origin:</b> {cat.origin}</p>
-                        <p><b className="bold">Life Span:</b> {cat.lifespan}</p>
-                        <p><b className="bold">Description:</b> <br/>{cat.description}</p>
-                    </div>
-                    <div className="cat-reviews">
-                        <h3 className="adaptability"><b className="bold">Adaptability: </b>{cat.adaptability}/5</h3>
-                        <h3><b className="bold">Affection:</b> {cat.affectionLevel}/5</h3>
-                        <p><b className="bold">Energy:</b> {cat.energyLevel}/5</p>
-                        <p><b className="bold">Grooming: </b>{cat.grooming}/5</p>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
-
-export default Cat;
+        */

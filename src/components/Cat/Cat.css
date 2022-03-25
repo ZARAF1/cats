@@ -9,12 +9,19 @@
 .cat .image-container {
     height: 16.66rem;
     margin-bottom: 1rem;
+    border-radius:20%;
 }
 
 .cat h2 {
     margin-bottom: .5rem;
     font-size: 1.2rem;
     font-weight: 600;
+    color: #11420d;
+    background-color: #FBF8BE;
+    padding: 15px;
+    border-radius:10px;
+
+    /*Royal Blue , Pale Yellow #FBF8BE*/
 }
 
 .cat-information {
@@ -25,13 +32,14 @@
 .cat-information p {
     font-size: .88rem;
     font-weight: 300;
-    line-height: 1rem;
+    line-height: 1.5rem;
 }
 
 .cat-origin {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .cat-reviews {
