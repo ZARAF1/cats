@@ -8,17 +8,7 @@ code a single Cat listing. Later, I will update it dynamically using the cat API
 
 // The information in the Cat object will be consumed by the <Cat /> component
 
-const cat = {
-    imageSrc: 'https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg',
-    name: 'Abyssinian',
-    origin: 'Egypt',
-    lifespan: '14-15 years',
-    adaptability: 5,
-    description: 'The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.',
-    affectionLevel: 4,
-    energyLevel: 5,
-    grooming: 1
-}
+
 class Cat extends React.Component{
 
 
@@ -26,20 +16,20 @@ class Cat extends React.Component{
         return (
             <div className="cat">
                 <div className="image-container">
-                    <img src={cat.imageSrc} alt={cat.name}/>
+                    <img src={this.props.cat.imageSrc} alt={this.props.cat.name}/>
                 </div>
-                <h2>{cat.name}</h2>
+                <h2>{this.props.cat.name}</h2>
                 <div className="cat-information">
                     <div className="cat-origin">
-                        <p><span className="bold">Origin:</span> {cat.origin}</p>
-                        <p><span className="bold">Life Span:</span> {cat.lifespan}</p>
-                        <p><span className="bold">Description:</span> <br/>{cat.description}</p>
+                        <p><span className="bold">Origin:</span> {this.props.cat.origin}</p>
+                        <p><span className="bold">Life Span:</span> {this.props.cat.lifespan}</p>
+                        <p><span className="bold">Description:</span> <br/>{this.props.cat.description}</p>
                     </div>
                     <div className="cat-reviews">
-                        <h3 className="adaptability"><span className="bold">Adaptability: </span>{cat.adaptability}/5</h3>
-                        <h3><span className="bold">Affection:</span> {cat.affectionLevel}/5</h3>
-                        <p><span className="bold">Energy:</span> {cat.energyLevel}/5</p>
-                        <p><span className="bold">Grooming: </span>{cat.grooming}/5</p>
+                        <h3 className="adaptability"><span className="bold">Adaptability: </span>{this.props.cat.adaptability}/5</h3>
+                        <h3><span className="bold">Affection:</span> {this.props.cat.affectionLevel}/5</h3>
+                        <p><span className="bold">Energy:</span> {this.props.cat.energyLevel}/5</p>
+                        <p><span className="bold">Grooming: </span>{this.props.cat.grooming}/5</p>
                     </div>
                 </div>
             </div>

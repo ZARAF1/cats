@@ -14,12 +14,9 @@ class CatList extends React.Component{
     render(){
         return (
             <div className="cat-list">
-                <Cat/>
-                <Cat/>
-                <Cat/>
-                <Cat/>
-                <Cat/>
-                <Cat/>
+                {this.props.cats.map(cat=>{
+                    return <Cat cat={cat} key={cat.id} />
+                })}
             </div>
         )
     }
