@@ -45,4 +45,3 @@ This was a 4-5 days project out of which i used maybe few hours per day.
 
 This project has been sent to me as an assessment by a great company whom i wish to impress with my code quality and knowledge. 
 
-The css broke at the end and will fix it once i have some more time.
