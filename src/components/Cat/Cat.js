@@ -1,6 +1,7 @@
 import React from "react";
 import "./Cat.css"
 
+
 /*
 Purpose: The purpose of the Cat component is to represent how a cat card will be formatted and styled. For now, we’ll hard
 code a single Cat listing. Later, I will update it dynamically using the cat API.
@@ -10,9 +11,8 @@ code a single Cat listing. Later, I will update it dynamically using the cat API
 
 
 class Cat extends React.Component{
-
-
     render() {
+        console.log(this.props.cat)
         return (
             <div className="cat">
                 <div className="image-container">

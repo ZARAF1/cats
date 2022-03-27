@@ -2,30 +2,35 @@ import React from "react";
 import './App.css';
 import CatList from "../CatList/CatList";
 import SearchBar from "../SearchBar/SearchBar";
+import catAPI from "../../util/Cat";
 
-const cat = {
-    imageSrc: 'https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg',
-    name: 'Abyssinian',
-    origin: 'Egypt',
-    lifespan: '14-15 years',
-    adaptability: 5,
-    description: 'The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.',
-    affectionLevel: 4,
-    energyLevel: 5,
-    grooming: 1
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cats: []
+        };
+        this.searchCat=this.searchCat.bind(this)
+    }
+
+    searchCat(name) {
+        catAPI.search(name).then(cat => {
+            this.setState({cats: cat});
+        });
+    }
+
+
+    render() {
+        console.log(this.state.cats)
+        return (
+            <div className="App">
+                <h1>Discover Cats!</h1>
+                <SearchBar searchCat={this.searchCat}/>
+                <CatList cats={this.state.cats}/>
+            </div>
+        );
+    }
 }
 
-const cats=[cat,cat,cat,cat,cat,cat]
-
-class App extends React.Component{
-  render() {
-    return (
-        <div className="App">
-          <h1>Discover Cats!</h1>
-          <SearchBar/>
-          <CatList cats={cats}/>
-        </div>
-    );
-  }
-}
 export default App;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./CatList.css"
 import Cat from "../Cat/Cat";
-// import axios from "axios";
+
 
 /*
 Purpose: The purpose of <CatList /> component is to simulate what a returned list of cats would look like
