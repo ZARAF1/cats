@@ -4,7 +4,10 @@
     flex-direction: column;
     justify-content: space-between;
     width: 16.66rem;
-    margin: 0 .5rem .3rem .5rem;
+    margin: 0 .5rem .9rem .5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    border-radius:2%;
 }
 
 .cat .image-container {
