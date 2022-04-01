@@ -35,6 +35,10 @@ To Visit App:
 
 `localhost:3000/`
 
+Live App:
+
+`https://discovercats.herokuapp.com/`
+
 To Perform Search:
 
 `You can make a blank search to view all cats or you can for example provide names such as Abyssinian,Australian Mist,Chantilly-Tiffany, Donskoy etc.,`
