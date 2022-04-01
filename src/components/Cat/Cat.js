@@ -1,6 +1,6 @@
 import React from "react";
 import "./Cat.css"
-
+/* eslint-disable react/prop-types */
 
 /*
 Purpose: The purpose of the Cat component is to represent how a cat card will be formatted and styled. For now, we’ll hard
@@ -39,22 +39,3 @@ class Cat extends React.Component{
 
 export default Cat;
 
-
-// constructor(props) {
-//     super(props);
-//     this.state={
-//         data:[]
-//     }
-// }
-
-/*
-        axios.get('https://api.thecatapi.com/v1/breeds', { headers: { 'x-api-key': 'a1e5d2b0-af8d-432e-8969-2b49d6621fbc' } })
-            .then(response => {
-                // If request is good...
-                // console.log(response.data);
-                this.setState({ data: response.data })
-            })
-            .catch((error) => {
-                console.log('error ' + error);
-            });
-        */

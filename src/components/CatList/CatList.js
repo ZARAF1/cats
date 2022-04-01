@@ -1,6 +1,7 @@
 import React from "react";
 import "./CatList.css"
 import Cat from "../Cat/Cat";
+/* eslint-disable react/prop-types */
 
 
 /*
@@ -15,7 +16,7 @@ class CatList extends React.Component{
         return (
             <ol className="cat-list">
                {this.props.cats.map(cat=>{
-                    return  <li><Cat cat={cat} key={cat.id} /></li>
+                    return  <li key={cat.id}><Cat cat={cat} /></li>
                 })}
 
             </ol>

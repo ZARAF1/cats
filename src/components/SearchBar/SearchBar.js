@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchBar.css"
-
+/* eslint-disable react/prop-types */
 /*
 The search bar will communicate with the Cat API, but I will build the functionality to communicate with the API later.
 Today, I will build part of the structure that’s needed to communicate with the cat API. Specifically,
